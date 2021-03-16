@@ -1,0 +1,1022 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+INTERSPEECH2020
+</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65563403-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65563403-4');
+</script>
+</head>
+<body>
+<div class="container">
+  <p>&nbsp;</p>
+  <p><span class="venue">INTERSPEECH 2021</span></p>
+  <p><span class="title">Target Speaker Text-to-Speech Synthesis from a Face Image Reference using Global Style Token Embedding</span></p>
+  <br />
+  <table border="0" align="center" class="authors">
+    <tr align="center" valign="bottom">
+    <td><a href="https://www.github.com/bjoernpl" target="_blank">Björn Plüster</a><sup>&#10013;</sup></td>
+    <td><a href="https://www.inf.uni-hamburg.de/en/inst/ab/wtm/people/qu.html" target="_blank">Leyuan Qu</a></td>
+    <td><a href="https://www.inf.uni-hamburg.de/en/inst/ab/wtm/people/weber.html" target="_blank">Cornelius Weber</a></td>
+    <td><a href="https://www.inf.uni-hamburg.de/en/inst/ab/wtm/people/wermter.html" target="_blank">Stefan Wermter</a></td>
+    </tr>
+  </table>
+  <br />
+
+  <table width="100%" border="0" align="center">
+  <tr>
+    <td width="97" align="center" style="padding:0 0px 0 0px;"><a href="https://www.inf.uni-hamburg.de/en/inst/ab/wtm.html" target="_blank">Knowledge Technology Group (WTM)</a></td>
+  </tr>
+  <th width="40%" align="center">Department of Informatics, University of Hamburg</th>
+  </table>
+
+
+  <table width="100%" border="0" align="center">
+  <tr>
+    <td align="center" width="100%"><img src="images/uhh-and-wtm.png" height="250" width="500" /></td>
+  </tr>
+  </table>
+
+  <p><span class="section">Abstract</span> </p>
+  <p style="font-size:17px;">
+    With multi-speaker TTS models from voice reference showing promising results
+and a crossmodal association of face and voice becoming more and more evident, we pose
+the question to what extent it is possible to predict a target speaker's voice from a face image reference.
+This paper proposes a model architecture combining Tacotron 2 multi-speaker TTS with a FaceNet face encoder
+using an intermediate representation based on Global Style Tokens to predict a speakers voice
+and speaking characteristics from a face image reference. Experimental results show reasonable matching
+ability while retaining good voice naturalness. We examine these results, compare with other methods, and discuss multiple possible avenues
+of improvement.
+    &nbsp;<br />
+  </p>
+  <br />
+  <p><span class="section">Architecture</span> </p>
+  <a><img src="images/pipeline.jpg" width="100%" id="architecture"/></a>
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <p><span class="section">Demos</span> </p>
+    <p>All samples in this section were generated from the test dataset.</p>
+
+    <div style="background-color: gray; width: 100%; height: 1px;"></div>
+    
+    <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>1L6lSFiV4xo</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/1L6lSFiV4xo/00002_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/1L6lSFiV4xo/00002_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/1L6lSFiV4xo/00002_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/1L6lSFiV4xo/00002_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>3OgsRa7VDtI</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/3OgsRa7VDtI/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/3OgsRa7VDtI/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/3OgsRa7VDtI/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/3OgsRa7VDtI/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>8nt3edWLgIg</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/8nt3edWLgIg/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/8nt3edWLgIg/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/8nt3edWLgIg/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/8nt3edWLgIg/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>9TPFLHvn024</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/9TPFLHvn024/00002_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/9TPFLHvn024/00002_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/9TPFLHvn024/00002_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/9TPFLHvn024/00002_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>B8rmi95pYL0</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/B8rmi95pYL0/00002_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/B8rmi95pYL0/00002_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/B8rmi95pYL0/00002_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/B8rmi95pYL0/00002_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>BhMKmovNjvc</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/BhMKmovNjvc/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/BhMKmovNjvc/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/BhMKmovNjvc/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/BhMKmovNjvc/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>dYNc3P4jSt4</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/dYNc3P4jSt4/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/dYNc3P4jSt4/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/dYNc3P4jSt4/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/dYNc3P4jSt4/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>E0oPnS7rUwE</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/E0oPnS7rUwE/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/E0oPnS7rUwE/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/E0oPnS7rUwE/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/E0oPnS7rUwE/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>FKxaL8Iau8Q</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/FKxaL8Iau8Q/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/FKxaL8Iau8Q/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/FKxaL8Iau8Q/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/FKxaL8Iau8Q/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>fTSXvLzNd0o</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/fTSXvLzNd0o/00002_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/fTSXvLzNd0o/00002_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/fTSXvLzNd0o/00002_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/fTSXvLzNd0o/00002_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>Hj9oB4zpHww</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/Hj9oB4zpHww/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/Hj9oB4zpHww/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/Hj9oB4zpHww/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/Hj9oB4zpHww/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>HqekWfSJCSA</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/HqekWfSJCSA/00002_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/HqekWfSJCSA/00002_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/HqekWfSJCSA/00002_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/HqekWfSJCSA/00002_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>JFQLvbVJVMg</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/JFQLvbVJVMg/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/JFQLvbVJVMg/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/JFQLvbVJVMg/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/JFQLvbVJVMg/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>LjAsM1vAhW0</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/LjAsM1vAhW0/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/LjAsM1vAhW0/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/LjAsM1vAhW0/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/LjAsM1vAhW0/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>LujWrkYsl64</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/LujWrkYsl64/00002_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/LujWrkYsl64/00002_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/LujWrkYsl64/00002_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/LujWrkYsl64/00002_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>mjDjbJJlqZ0</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/mjDjbJJlqZ0/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/mjDjbJJlqZ0/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/mjDjbJJlqZ0/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/mjDjbJJlqZ0/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>P2AUat93a8Q</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/P2AUat93a8Q/00002_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/P2AUat93a8Q/00002_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/P2AUat93a8Q/00002_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/P2AUat93a8Q/00002_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>PhVP1tNeGyY</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/PhVP1tNeGyY/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/PhVP1tNeGyY/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/PhVP1tNeGyY/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/PhVP1tNeGyY/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>QKHkSUiQboA</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/QKHkSUiQboA/00003_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/QKHkSUiQboA/00003_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/QKHkSUiQboA/00003_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/QKHkSUiQboA/00003_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+    
+        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker">Speaker: <b>shG0ezBeeJc</b></p>
+        <tr>
+            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Generated</th>
+        </tr>
+        <tr>
+            <td >
+                <p class="centertext">Face reference:</p>
+                <div class="centersection">
+                <img align="center" src="ours/shG0ezBeeJc/00001_1.jpg" width="160" />
+                </div>
+            </td>
+            <td>
+                <p>From voice reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                    <source src="ours/shG0ezBeeJc/00001_1_voice.wav" type="audio/wav" />
+                    Does not support </audio>
+                <p>From face reference:</p>
+                <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/shG0ezBeeJc/00001_1_face.wav" type="audio/wav" />
+                        Does not support </audio>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <p class="centertext">Voice reference:</p>
+                <div class="centersection">
+                    <audio controls class="audio-player" preload="metadata">
+                        <source src="ours/shG0ezBeeJc/00001_1_ground.wav" type="audio/wav" />
+                        Does not support </audio>
+                </div>
+            </td>
+            <td>
+                <details>
+                    <summary class="th_title"><b>Evaluation results</b></summary>
+                    <p><u>Matching</u>: 2.35 &plusmn 0.05</p>
+                <p><u>Naturalness</u>: 3.56 &plusmn 0.05</p>
+                </details>
+                
+    
+            </td>
+        </tr>
+    
+  </table>
+
+<h2>BibTeX</h2>
+<pre class="citation">
+    To be added if published.
+<!-- @inproceedings{qu2020multimodal,
+  author    = {Leyuan Qu, Cornelius Weber and Stefan Wermter},
+  title     = {Multimodal Target Speech Separation with Voice and Face References},
+  booktitle = {{INTERSPEECH}},
+  year      = {2020}
+} -->
+</pre>
+
+<h2>Paper Link</h2>
+
+<a href="https://arxiv.org/pdf/2005.08335.pdf">
+    <div class="thumbs">
+      <img src="images/paper/INTERSPEECH_2020_Paper_ID_1697_camera-ready-1.jpg" width="19%">
+      <img src="images/paper/INTERSPEECH_2020_Paper_ID_1697_camera-ready-2.jpg" width="19%">
+      <img src="images/paper/INTERSPEECH_2020_Paper_ID_1697_camera-ready-3.jpg" width="19%">
+      <img src="images/paper/INTERSPEECH_2020_Paper_ID_1697_camera-ready-4.jpg" width="19%">
+      <img src="images/paper/INTERSPEECH_2020_Paper_ID_1697_camera-ready-5.jpg" width="19%">
+    </div>
+</a>
+
+
+</div>
+</body>
+</html>
