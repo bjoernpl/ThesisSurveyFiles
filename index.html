@@ -5,6 +5,7 @@
 <title>
 INTERSPEECH2021
 </title>
+<link rel="shortcut icon" type="image/jpg" href="images/uhh-logo-favicon1.jpg"/>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65563403-3"></script>
@@ -16,10 +17,20 @@ INTERSPEECH2021
   gtag('config', 'UA-65563403-4');
 </script> -->
 <script type="text/javascript"> 
-    document.getElementById("showmore").onclick = function() { 
+    let show = function() { 
+        console.log("testtest");
         document.getElementById("showmore").style.display = "none";
-        document.getElementsByClassName("more").style.display = "block"; 
-    }
+        let samples = document.getElementsByClassName("more")
+        for (i = 0; i < samples.length; i++) {
+            let s = samples[i];
+            console.log(s.tagName)
+            if (s.tagName == "P"){
+                s.style.display = "block";
+            }else{
+                s.style.display = "table"; 
+            }
+        };
+    };
 </script>
 </head>
 <body>
@@ -312,7 +323,7 @@ of improvement.
         </tr>
 </table>
         <div width="100%" style="display: grid; padding-top: 16px;">
-            <button id="showmore" style="margin: auto;"> Show 15 More Samples</button>
+            <button id="showmore" style="margin: auto;" onclick="show()"> Show 15 More Samples</button>
         </div>
         <table class="demo_table more" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
         <p class="speaker centertext more">Speaker: <b>BhMKmovNjvc</b></p>
