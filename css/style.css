@@ -97,3 +97,20 @@ table.data td {
 .speaker {
     font-size: medium;
 }
+
+th, td {
+    border-right: 1px solid #eeeeef;
+    padding-left: 20px;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+.demo_table {
+    padding-bottom: 20px;
+}
+
+.more{
+    display: none;
+}

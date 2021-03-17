@@ -3,22 +3,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-INTERSPEECH2020
+INTERSPEECH2021
 </title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65563403-3"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65563403-3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-65563403-4');
+</script> -->
+<script type="text/javascript"> 
+    document.getElementById("showmore").onclick = function() { 
+        document.getElementById("showmore").style.display = "none";
+        document.getElementsByClassName("more").style.display = "block"; 
+    }
 </script>
 </head>
 <body>
 <div class="container">
   <p>&nbsp;</p>
+
+  <table width="100%" border="0" align="center">
+    <tr>
+    <td align="center" width="50%"><img src="images/uhh_klein.jpg" height="150" width="323" /></td>
+
+      <td align="center" width="50%"><img src="images/wtm_logo.png" height="150" width="150" /></td>
+    </tr>
+    </table>
+
   <p><span class="venue">INTERSPEECH 2021</span></p>
   <p><span class="title">Target Speaker Text-to-Speech Synthesis from a Face Image Reference using Global Style Token Embedding</span></p>
   <br />
@@ -40,12 +55,6 @@ INTERSPEECH2020
   </table>
 
 
-  <table width="100%" border="0" align="center">
-  <tr>
-    <td align="center" width="100%"><img src="images/uhh-and-wtm.png" height="250" width="500" /></td>
-  </tr>
-  </table>
-
   <p><span class="section">Abstract</span> </p>
   <p style="font-size:17px;">
     With multi-speaker TTS models from voice reference showing promising results
@@ -64,25 +73,22 @@ of improvement.
 
   <br />
   <br />
-  <br />
-  <br />
-  <br />
   <p><span class="section">Demos</span> </p>
     <p>All samples in this section were generated from the test dataset.</p>
 
     <div style="background-color: gray; width: 100%; height: 1px;"></div>
     
-    <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>1L6lSFiV4xo</b></p>
+    <table class="demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker centertext">Speaker: <b>1L6lSFiV4xo</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
-                <img align="center" src="ours/1L6lSFiV4xo/00002_1.jpg" width="160" />
+                <p>Face reference:</p>
+                <div>
+                <img src="ours/1L6lSFiV4xo/00002_1.jpg" width="160" />
                 </div>
             </td>
             <td>
@@ -99,8 +105,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p> 
+                <div >
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/1L6lSFiV4xo/00002_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -116,18 +122,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>3OgsRa7VDtI</b></p>
+        <table class="demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker centertext">Speaker: <b>3OgsRa7VDtI</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/3OgsRa7VDtI/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -145,8 +152,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/3OgsRa7VDtI/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -162,18 +169,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>8nt3edWLgIg</b></p>
+        <table class="demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker centertext">Speaker: <b>8nt3edWLgIg</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/8nt3edWLgIg/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -191,8 +199,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/8nt3edWLgIg/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -208,18 +216,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
+
     
-    
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>9TPFLHvn024</b></p>
+        <table class="demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker centertext">Speaker: <b>9TPFLHvn024</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/9TPFLHvn024/00002_1.jpg" width="160" />
                 </div>
             </td>
@@ -237,8 +246,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/9TPFLHvn024/00002_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -254,18 +263,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>B8rmi95pYL0</b></p>
+        <table class="demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker centertext">Speaker: <b>B8rmi95pYL0</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/B8rmi95pYL0/00002_1.jpg" width="160" />
                 </div>
             </td>
@@ -283,8 +293,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/B8rmi95pYL0/00002_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -300,18 +310,20 @@ of improvement.
     
             </td>
         </tr>
-    
-    
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>BhMKmovNjvc</b></p>
+</table>
+        <div width="100%" style="display: grid; padding-top: 16px;">
+            <button id="showmore" style="margin: auto;"> Show 15 More Samples</button>
+        </div>
+        <table class="demo_table more" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="speaker centertext more">Speaker: <b>BhMKmovNjvc</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/BhMKmovNjvc/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -329,8 +341,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/BhMKmovNjvc/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -346,18 +358,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>dYNc3P4jSt4</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>dYNc3P4jSt4</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/dYNc3P4jSt4/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -375,8 +388,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/dYNc3P4jSt4/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -392,18 +405,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>E0oPnS7rUwE</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>E0oPnS7rUwE</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/E0oPnS7rUwE/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -421,8 +435,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/E0oPnS7rUwE/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -438,18 +452,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>FKxaL8Iau8Q</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>FKxaL8Iau8Q</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/FKxaL8Iau8Q/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -467,8 +482,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/FKxaL8Iau8Q/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -484,18 +499,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>fTSXvLzNd0o</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>fTSXvLzNd0o</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/fTSXvLzNd0o/00002_1.jpg" width="160" />
                 </div>
             </td>
@@ -513,8 +529,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/fTSXvLzNd0o/00002_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -530,18 +546,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>Hj9oB4zpHww</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>Hj9oB4zpHww</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/Hj9oB4zpHww/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -559,8 +576,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/Hj9oB4zpHww/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -576,18 +593,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>HqekWfSJCSA</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>HqekWfSJCSA</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/HqekWfSJCSA/00002_1.jpg" width="160" />
                 </div>
             </td>
@@ -605,8 +623,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/HqekWfSJCSA/00002_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -622,18 +640,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>JFQLvbVJVMg</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>JFQLvbVJVMg</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/JFQLvbVJVMg/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -651,8 +670,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/JFQLvbVJVMg/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -668,18 +687,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>LjAsM1vAhW0</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>LjAsM1vAhW0</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/LjAsM1vAhW0/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -697,8 +717,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/LjAsM1vAhW0/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -714,18 +734,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>LujWrkYsl64</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>LujWrkYsl64</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/LujWrkYsl64/00002_1.jpg" width="160" />
                 </div>
             </td>
@@ -743,8 +764,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/LujWrkYsl64/00002_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -760,18 +781,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>mjDjbJJlqZ0</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>mjDjbJJlqZ0</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/mjDjbJJlqZ0/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -789,8 +811,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/mjDjbJJlqZ0/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -806,18 +828,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>P2AUat93a8Q</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>P2AUat93a8Q</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/P2AUat93a8Q/00002_1.jpg" width="160" />
                 </div>
             </td>
@@ -835,8 +858,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/P2AUat93a8Q/00002_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -852,18 +875,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>PhVP1tNeGyY</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>PhVP1tNeGyY</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/PhVP1tNeGyY/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -881,8 +905,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/PhVP1tNeGyY/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -898,18 +922,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>QKHkSUiQboA</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>QKHkSUiQboA</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/QKHkSUiQboA/00003_1.jpg" width="160" />
                 </div>
             </td>
@@ -927,8 +952,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/QKHkSUiQboA/00003_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -944,18 +969,19 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
     
-        <table style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
-        <p class="speaker">Speaker: <b>shG0ezBeeJc</b></p>
+        <table class="more demo_table" style="border-bottom: 1px dashed #cdd0d5;" width="100%" border="0" align="center">
+        <p class="more speaker centertext">Speaker: <b>shG0ezBeeJc</b></p>
         <tr>
-            <th class="th_title" width="30%">Ground Truth</th>
+            <th class="th_title" width="50%">Ground Truth</th>
             <th class="th_title" width="50%">Generated</th>
         </tr>
         <tr>
             <td >
-                <p class="centertext">Face reference:</p>
-                <div class="centersection">
+                <p>Face reference:</p>
+                <div>
                 <img align="center" src="ours/shG0ezBeeJc/00001_1.jpg" width="160" />
                 </div>
             </td>
@@ -973,8 +999,8 @@ of improvement.
     
         <tr>
             <td>
-                <p class="centertext">Voice reference:</p>
-                <div class="centersection">
+                <p>Voice reference:</p>
+                <div>
                     <audio controls class="audio-player" preload="metadata">
                         <source src="ours/shG0ezBeeJc/00001_1_ground.wav" type="audio/wav" />
                         Does not support </audio>
@@ -990,6 +1016,7 @@ of improvement.
     
             </td>
         </tr>
+</table>
     
   </table>
 
